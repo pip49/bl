@@ -97,11 +97,10 @@
         .modal-content {
             position: relative;
             width: 90%;
-            max-width: 500px; /* 오디오 플레이어에 맞춰 가로폭 조정 */
+            max-width: 800px;
         }
 
-        /* 오디오 플레이어 스타일 */
-        audio {
+        video, audio {
             width: 100%;
             outline: none;
         }
@@ -156,10 +155,10 @@
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="close-btn" onclick="closeModal()">&times;</span>
 
-            <audio id="myAudio" controls>
-                <source src="5.mp3" type="audio/mpeg">
-                브라우저가 오디오 태그를 지원하지 않습니다.
-            </audio>
+            <video id="myVideo" controls>
+                <source src="weld_3.mp4" type="video/mp4">
+                브라우저가 비디오 태그를 지원하지 않습니다.
+            </video>
 
             </div>
     </div>
@@ -171,17 +170,17 @@
 
     <script>
         const modal = document.getElementById("mediaModal");
-        const audio = document.getElementById("myAudio");
+        const video = document.getElementById("myVideo");
 
         function openModal() {
             modal.style.display = "flex";
-            audio.play(); // 열릴 때 자동 재생
+            video.play(); // 열릴 때 자동 재생
         }
 
         function closeModal() {
             modal.style.display = "none";
-            audio.pause(); // 닫을 때 일시정지
-            audio.currentTime = 0; // 재생 위치 초기화
+            video.pause(); // 닫을 때 일시정지
+            video.currentTime = 0; // 재생 위치 초기화
         }
 
         // ESC 키 누르면 닫기
