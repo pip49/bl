@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루스 레전드</title>
+    <style>
+        /* 기본 배경 및 폰트 설정 */
+        body {
+            background-color: #121212; /* 어두운 블루스 클럽 느낌 */
+            color: #e0e0e0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        /* 상단 이미지 섹션 */
+        header {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .profile-img {
+            max-width: 300px; /* 크기 조절 가능 */
+            height: auto;
+            border-radius: 10px;
+            /* 캐릭터처럼 보이게 살짝 그림자 효과 */
+            filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.3));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #ffb400; /* 금색 계열 포인트 */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* 중앙 메인 콘텐츠 영역 */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* 우측 하단 세로 링크 메뉴 */
+        .side-menu {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .side-menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .side-menu a:hover {
+            color: #ffb400;
+            border-bottom: 1px solid #ffb400;
+        }
+
+        /* 푸터 설정 */
+        footer {
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 600px) {
+            .side-menu {
+                position: static;
+                margin-top: 50px;
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="나2.png" alt="블루스 아티스트" class="profile-img">
+        <h1>블루스 레전드</h1>
+    </header>
+
+    <main>
+        <div class="side-menu">
+            <a href="#location">장소</a>
+            <a href="#time">시간</a>
+            <a href="#performer">출연자</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: your-email@example.com</p>
+        <p>&copy; 2026 Blues Legend. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
