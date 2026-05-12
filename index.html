@@ -30,12 +30,12 @@
             height: auto;
             border-radius: 10px;
             filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.3));
-            cursor: pointer; /* 클릭 가능하다는 표시 */
+            cursor: pointer;
             transition: transform 0.3s ease;
         }
 
         .profile-img:hover {
-            transform: scale(1.05); /* 마우스 올리면 살짝 커짐 */
+            transform: scale(1.05);
             filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.5));
         }
 
@@ -80,16 +80,19 @@
             border-bottom: 1px solid #ffb400;
         }
 
-        /* 미디어 모달 (팝업) 스타일 */
+        /* 미디어 모달 (팝업) 스타일 - 투명도 개선 */
         .modal {
-            display: none; /* 기본적으로 숨김 */
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* 배경을 어둡게 */
+            /* 배경 투명도를 0.9에서 0.6으로 조절하여 뒷배경이 더 잘 보이게 함 */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* 세련된 느낌을 위해 배경에 살짝 흐림 효과 추가 */
+            backdrop-filter: blur(3px);
             justify-content: center;
             align-items: center;
         }
@@ -97,7 +100,7 @@
         .modal-content {
             position: relative;
             width: 90%;
-            max-width: 500px; /* 오디오 플레이어에 맞춰 가로폭 조정 */
+            max-width: 500px;
         }
 
         /* 오디오 플레이어 스타일 */
@@ -139,8 +142,7 @@
 <body>
 
     <header>
-        <img src="나2.png" alt="블루스 아티스트" class="profile-img" onclick="openModal()">
-        <h1>블루스 레전드</h1>
+        <img src="나2.png" alt="블루스 아티스트" class="profile-img" onclick="openModal()"> <h1>블루스 레전드</h1>
         <p style="color: #666; font-size: 0.9rem;">이미지를 클릭하여 연주를 감상해보세요</p>
     </header>
 
